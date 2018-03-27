@@ -16,6 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from dataForms.views import home,template,ClientInfo,WaterProofingView, SoundVibrationVIew, ProjectConsultancyView,ProjectVarianceVIew,BankingView,MarketServeyView
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', home, name = 'home'),
+    path('admin/', admin.site.urls, name = 'admin'),
+    path('template/',template, name = 'template'),
+    path('clientInfo/',ClientInfo.as_view(), name = 'ClientInfo'),
+    path('WaterProofingView/',WaterProofingView.as_view(), name = 'WaterProofingView'),
+    path('SoundVibrationVIew/',SoundVibrationVIew.as_view(), name = 'SoundVibrationVIew'),
+    path('ProjectConsultancyView/',ProjectConsultancyView.as_view(), name = 'ProjectConsultancyView'),
+    path('ProjectVarianceVIew/',ProjectVarianceVIew.as_view(), name = 'ProjectVarianceVIew'),
+    path('BankingView/',BankingView.as_view(), name = 'BankingView'),
+    path('MarketServeyView/',MarketServeyView.as_view(), name = 'MarketServeyView'),
 ]

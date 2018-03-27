@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<h1>This is home Page</h1>
+
+<h4>All present links on this page </h4>
+{% for link,name in allViews %}
+    <a href="{% url link %}">{{name}}</a><br>
+{% endfor %}
+
+</body>
+</html>

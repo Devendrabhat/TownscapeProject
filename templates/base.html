@@ -2,11 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    {% block title %}
     <title>Form</title>
+    {% endblock %}
 </head>
 <body>
+    Home => <a href="{% url 'home' %}">Home</a>.
+    <h2>
+    {% block page %}
+        Enter Your page title here
+    {% endblock %}
+    </h2>
 
-<button type="button">Click Me!</button>
+    <form method="post">
+
+        {% csrf_token %}
+
+        {% block formFields %}
+            Enter your form Fields to generate form <br>
+        {% endblock %}
+
+        <input type="submit" value="Submit">
+    </form>
+
+
 
 </body>
 </html>
