@@ -2,3 +2,6 @@
 db.sqlite3
 website/__pycache__
 dataForms/__pycache__
+website/settings/local.py
+website/settings/__pycache__
+website/old_settings.py
